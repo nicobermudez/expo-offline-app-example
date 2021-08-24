@@ -1,0 +1,12 @@
+schema: https://rickandmortyapi.com/graphql
+documents: "src/**/!(*.d).{ts,tsx,graphql}"
+watch: true
+generates:
+    ./src/generated-gql.ts:
+        plugins:
+            - typescript
+            - typescript-operations
+            - typescript-react-apollo
+            - typescript-resolvers
+            - typescript-apollo-client-helpers
+            - fragment-matcher

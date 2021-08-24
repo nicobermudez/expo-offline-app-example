@@ -1,1 +1,1 @@
-export * from "./more-screen";
+export * from "./MoreScreen";

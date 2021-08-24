@@ -1,19 +1,18 @@
 import styled from "@emotion/native";
 import React from "react";
 import { Text } from "react-native";
-import { colors } from "src/constants";
 
-const HomeContainer = styled.View({
+const Wrapper = styled.View({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: colors.whiteMedium,
+    backgroundColor: "#fbfbfb",
 });
 
 export const HomeScreen: React.FC = () => {
     return (
-        <HomeContainer>
-            <Text>Hey, Nico</Text>
-        </HomeContainer>
+        <Wrapper>
+            <Text>Welcome! Enjoy the app offline </Text>
+        </Wrapper>
     );
 };

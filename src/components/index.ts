@@ -1,2 +1,2 @@
-export * from "./CategoriesCard";
-export * from "./CategoriesList";
+export * from "./CharacterCard";
+export * from "./OfflineBanner";

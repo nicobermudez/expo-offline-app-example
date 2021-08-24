@@ -1,18 +1,25 @@
-module.exports = function(api) {
-  api.cache(true);
-  return {
-    presets: ["module:metro-react-native-babel-preset", "babel-preset-expo"],
-    plugins: [
-      [
-        "module-resolver",
-        {
-          alias: {
-            src: "./src",
-          },
-        },
-      ],
-      "@babel/plugin-proposal-optional-chaining",
-      "@babel/plugin-proposal-nullish-coalescing-operator"
-    ],
-  };
+module.exports = function (api) {
+    api.cache(true);
+    return {
+        presets: ["babel-preset-expo"],
+        plugins: [
+            [
+                "module-resolver",
+                {
+                    root: ["./src"],
+                    extensions: [
+                        ".ios.js",
+                        ".android.js",
+                        ".js",
+                        ".ts",
+                        ".tsx",
+                        ".json",
+                    ],
+                    alias: {
+                        "@app": "./src",
+                    },
+                },
+            ],
+        ],
+    };
 };
